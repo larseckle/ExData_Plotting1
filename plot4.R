@@ -4,7 +4,7 @@ library(sqldf)
 dataFile <- "./data/household_power_consumption.txt"
 
 wp <- file(dataFile)
-attr(wp, "file.format") <- list(sep = ";", header = TRUE)
+attr(wp, "file.format") <- list(sep = ";" , header = TRUE)
 
 # use sqldf to read only the data required 
 plotdata <- sqldf("select * from wp where Date in ('1/2/2007','2/2/2007')")

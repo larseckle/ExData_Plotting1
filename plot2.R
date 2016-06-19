@@ -9,6 +9,7 @@ attr(wp, "file.format") <- list(sep = ";", header = TRUE)
 # use sqldf to read only the data required 
 plotdata <- sqldf("select * from wp where Date in ('1/2/2007','2/2/2007')")
 
+
 timeline <- strptime(paste(plotdata$Date, plotdata$Time, sep = " "),"%d/%m/%Y %H:%M:%S")
 
 # open file
